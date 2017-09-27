@@ -1,0 +1,16 @@
+version: "2"
+services:
+  ubuntu-xenial:
+    privileged: true
+    build: 
+      context: .
+      dockerfile: ubuntu-xenial.Dockerfile
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /home/agomes/Workspace/Infra/saltstack:/srv/salt
+      - /home/agomes/Workspace/Infra/salt-pillar/pillar:/srv/pillar
+      # - ./srv/salt:/srv/salt
+      # - ./srv/pillar:/srv/pillar
+    # hostname: 'cert-lw.tray.net.br'
+    # hostname: 'easycheckout-bd1-tmk.tray.net.br'
+    hostname: "commerce-api-web1-tmk.tray.net.br"
