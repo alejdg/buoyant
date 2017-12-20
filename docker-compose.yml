@@ -11,4 +11,4 @@ services:
       - /home/pillar:/srv/pillar
       # - ./srv/salt:/srv/salt
       # - ./srv/pillar:/srv/pillar
-     hostname: 'hostname.com'
+    hostname: 'hostname.com'
